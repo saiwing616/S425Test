@@ -6,5 +6,5 @@ while : ; do
    OUT="${OUT%% *}"
    DELAY=$((RANDOM * 1000 / 32768))
    usleep $((DELAY * 1000 + RANDOM % 1000 ))
-   echo n > /proc/$OUT/fd/1                 # Trigger defect
+   echo n > /proc/$OUT/fd/1
 done
